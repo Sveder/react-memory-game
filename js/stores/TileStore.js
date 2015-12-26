@@ -15,8 +15,10 @@ function generateTiles() {
     for (var i = 1; i < 9; i++) {
         images.push("images/" + i + ".jpg");
     }
-    images = _.shuffle(images);
-    images = images.concat(images);
+    images = _.shuffle(images); 
+
+    var descs = [];
+    images = images.concat(images); 
     for (var i = 0; i < images.length; i++) {
         _tiles.push({
             image: images[i],
