@@ -9,16 +9,20 @@ var CHANGE_EVENT = 'change';
 
 var _tiles = [];
 
+var texts = {"1" : "",
+             
+              }}
+
 
 function generateTiles() {
     var images = [];
     for (var i = 1; i < 9; i++) {
-        images.push("images/" + i + ".jpg");
+        images.push("images/__" + i + "a.jpg");
+        images.push("images/__" + i + "b.jpg");
     }
     images = _.shuffle(images); 
 
     var descs = [];
-    images = images.concat(images); 
     for (var i = 0; i < images.length; i++) {
         _tiles.push({
             image: images[i],
@@ -53,8 +57,12 @@ function matchCheck() {
     }
 
     if (flipped.length < 2) return;
+    
+    regex = /images\/__(.+)[ab]\.jpg/;
+    first = regex.exec(_tiles[flipped[0]].image);
+    second = regex.exec(_tiles[flipped[1]].image); 
 
-    if (_tiles[flipped[0]].image === _tiles[flipped[1]].image) {
+    if (first[1] == second[1]) {
         _tiles[flipped[0]].matched = true;
 
         _tiles[flipped[1]].matched = true;
