@@ -9,11 +9,6 @@ var CHANGE_EVENT = 'change';
 
 var _tiles = [];
 
-var texts = {"1" : "",
-             
-              }}
-
-
 function generateTiles() {
     var images = [];
     for (var i = 1; i < 9; i++) {
