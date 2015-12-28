@@ -7,11 +7,11 @@ var TileStore = require('./TileStore');
 var CHANGE_EVENT = 'change';
 
 var _messages = {
-    choosetile: 'Choose a tile!',
-    findmate: 'Now try to find the matching tile!',
-    wrong: 'Sorry, those didn\'t match!',
-    foundmate: 'Yey, they matched!',
-    foundall: 'You\'ve found all pairs! Well done!'
+    choosetile: 'תבחרו ריבוע',
+    findmate: 'עכשיו תנסו למצוא את התמונה המתאימה לה',
+    wrong: 'טעות, הפעם',
+    foundmate: 'יאי!! מצאת!',
+    foundall: 'מצאת את כל הצמדים! ניצחת!'
 };
 
 var _message = _messages.choosetile;
