@@ -99,3 +99,11 @@ body {
   background-size: cover;
   transform: rotateY(180deg);
 }
+
+#feather {
+  	text-align: right;
+}
+
+#feather img{
+  	margin-left: 5px;
+}
